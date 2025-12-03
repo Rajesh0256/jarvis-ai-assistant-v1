@@ -1,0 +1,99 @@
+╔══════════════════════════════════════════════════════════════╗
+║          JARVIS TEXT INPUT - QUICK START GUIDE               ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎯 NEW FEATURE: Type Commands Instead of Speaking!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 HOW TO USE:
+
+1. Look for the text input field at the bottom of the screen
+2. Type your command (e.g., "open notepad")
+3. Press ENTER or click SEND button
+4. Jarvis processes it just like voice commands!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ EXAMPLE COMMANDS:
+
+Basic:
+  • open chrome
+  • close notepad
+  • play music
+
+Files:
+  • create folder MyDocs
+  • delete file test.txt
+  • search file report.pdf
+
+System:
+  • brightness 70
+  • volume up
+  • shutdown
+
+Knowledge:
+  • what's the latest news
+  • tell me about Buddhism
+  • history of ancient Rome
+
+Vision:
+  • analyze image photo.jpg
+  • read text from document.png
+
+Internet:
+  • google search Python
+  • internet speed
+  • weather in London
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ ADVANTAGES:
+
+✓ Use in quiet environments (library, office)
+✓ No speech recognition errors
+✓ Better for complex commands
+✓ More private (no audio)
+✓ Works without microphone
+✓ Faster for good typists
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎤 VOICE vs 📝 TEXT:
+
+Use VOICE when:
+  • Hands-free needed
+  • Quick simple commands
+  • Natural conversation
+
+Use TEXT when:
+  • In quiet/public places
+  • Complex file names
+  • Need precision
+  • Privacy important
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 TIPS:
+
+1. Use same format as voice commands
+2. Start with action verb (open, close, play)
+3. Be clear and direct
+4. No need for "please" or "can you"
+5. Press ENTER for quick send
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔄 SWITCHING MODES:
+
+Voice → Text:
+  Click text input field and start typing
+
+Text → Voice:
+  Click microphone icon to activate voice
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 For detailed guide, see: docs/TEXT_INPUT_FEATURE.md
+
+🎉 Now you can use Jarvis YOUR way - speak OR type!

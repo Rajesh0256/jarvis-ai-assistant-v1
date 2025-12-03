@@ -1,0 +1,84 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║           JARVIS NEWS & GEOPOLITICS - QUICK START GUIDE              ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+✅ FEATURE ADDED: Jarvis can now tell you about current news and geopolitics!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📰 WHAT YOU CAN ASK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+GENERAL NEWS:
+  • "What's the latest news?"
+  • "Tell me today's news"
+  • "Current news"
+  • "What's happening in the news?"
+
+GEOPOLITICS:
+  • "Tell me about geopolitics"
+  • "What's happening in world politics?"
+  • "Geopolitical situation"
+  • "International relations"
+
+CATEGORY NEWS:
+  • "Business news"
+  • "Technology news"
+  • "Sports news"
+  • "Health news"
+
+SPECIFIC TOPICS:
+  • "News about [topic]"
+  • "Tell me news about climate change"
+  • "What's the news on elections?"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚙️ SETUP (OPTIONAL BUT RECOMMENDED)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+For real-time news, add a free API key:
+
+1. Visit: https://newsapi.org/
+2. Sign up (free)
+3. Copy your API key
+4. Open .env file
+5. Add: NEWS_API_KEY=your_key_here
+6. Restart Jarvis
+
+Without API key: Jarvis will guide you or use web search as fallback.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🧪 TEST IT NOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Run: python test_news_geopolitics.py
+
+Or just start Jarvis and say:
+  "What's the latest news?"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 FILES ADDED/MODIFIED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NEW FILES:
+  ✓ Backend/NewsGeopolitics.py - News fetching engine
+  ✓ NEWS_GEOPOLITICS_GUIDE.md - Complete documentation
+  ✓ test_news_geopolitics.py - Test script
+  ✓ NEWS_QUICK_START.txt - This file
+
+MODIFIED FILES:
+  ✓ Main.py - Added news command handling
+  ✓ Backend/Model.py - Added news query recognition
+  ✓ .env - Added NEWS_API_KEY placeholder
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 HOW IT WORKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. You ask Jarvis about news
+2. Jarvis recognizes it as a news query
+3. Fetches latest information from news sources
+4. Displays and speaks the news to you
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ ENJOY STAYING INFORMED WITH JARVIS! ✨

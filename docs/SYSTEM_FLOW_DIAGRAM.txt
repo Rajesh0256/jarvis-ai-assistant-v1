@@ -1,0 +1,276 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                  JARVIS AUTHENTICATION SYSTEM FLOW                       ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         SYSTEM STARTUP FLOW                             │
+└─────────────────────────────────────────────────────────────────────────┘
+
+    python Main.py
+         │
+         ▼
+    ┌─────────────────────┐
+    │  Create QApplication │  ◄── Single instance for entire app
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Show Login Page    │
+    │  (600x700 window)   │
+    └──────────┬──────────┘
+               │
+               ▼
+         ┌─────────┐
+         │ User    │
+         │ Action? │
+         └────┬────┘
+              │
+      ┌───────┴───────┐
+      │               │
+      ▼               ▼
+  [Login]      [Create Account]
+      │               │
+      │               ▼
+      │        ┌──────────────────┐
+      │        │ Registration Page│
+      │        │  - Username      │
+      │        │  - Email         │
+      │        │  - Password      │
+      │        │  - Confirm Pass  │
+      │        └────────┬─────────┘
+      │                 │
+      │                 ▼
+      │        ┌──────────────────┐
+      │        │ Validate & Save  │
+      │        │ to users.json    │
+      │        └────────┬─────────┘
+      │                 │
+      │                 ▼
+      │        ┌──────────────────┐
+      │        │ Return to Login  │
+      │        └────────┬─────────┘
+      │                 │
+      └─────────────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │ Authenticate User   │
+    │ (Check password)    │
+    └──────────┬──────────┘
+               │
+         ┌─────┴─────┐
+         │           │
+         ▼           ▼
+    [Success]    [Failed]
+         │           │
+         │           ▼
+         │    ┌──────────────┐
+         │    │ Show Error   │
+         │    │ Stay on Login│
+         │    └──────────────┘
+         │
+         ▼
+    ┌─────────────────────┐
+    │ Close Login Window  │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │ Print Welcome Msg   │
+    │ "Welcome username!" │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │ InitialExecution()  │
+    │ - Setup files       │
+    │ - Load chat logs    │
+    │ - Face auth (opt)   │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │ Start FirstThread   │
+    │ (Voice recognition) │
+    │ (Daemon thread)     │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │ Create MainWindow   │  ◄── Reuses same QApplication
+    │ (Jarvis GUI)        │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │ Show Jarvis GUI     │
+    │ (Fullscreen)        │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │ app.exec_()         │  ◄── Event loop runs
+    │ (GUI is active)     │
+    └─────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         THREAD ARCHITECTURE                             │
+└─────────────────────────────────────────────────────────────────────────┘
+
+    ┌──────────────────────────────────────────────────────────┐
+    │                    MAIN THREAD                           │
+    │                                                          │
+    │  ┌────────────────┐         ┌────────────────┐          │
+    │  │  QApplication  │────────▶│  Login Page    │          │
+    │  └────────────────┘         └────────┬───────┘          │
+    │                                      │                  │
+    │                              [User Logs In]             │
+    │                                      │                  │
+    │                                      ▼                  │
+    │                             ┌────────────────┐          │
+    │                             │  MainWindow    │          │
+    │                             │  (Jarvis GUI)  │          │
+    │                             └────────────────┘          │
+    │                                                          │
+    └──────────────────────────────────────────────────────────┘
+                                   │
+                                   │ Spawns
+                                   ▼
+    ┌──────────────────────────────────────────────────────────┐
+    │                  BACKGROUND THREAD                       │
+    │                   (FirstThread)                          │
+    │                                                          │
+    │  ┌─────────────────────────────────────────────┐        │
+    │  │  while True:                                │        │
+    │  │    Check Microphone Status                  │        │
+    │  │    If Active:                               │        │
+    │  │      ├─ Speech Recognition                  │        │
+    │  │      ├─ Process Command                     │        │
+    │  │      ├─ Execute Automation                  │        │
+    │  │      └─ Text to Speech                      │        │
+    │  └─────────────────────────────────────────────┘        │
+    │                                                          │
+    └──────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         DATA FLOW                                       │
+└─────────────────────────────────────────────────────────────────────────┘
+
+    User Input (Login)
+         │
+         ▼
+    ┌─────────────────────┐
+    │ LoginPage.py        │
+    │ - Collect username  │
+    │ - Collect password  │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │ Authentication.py   │
+    │ - Hash password     │
+    │ - Check users.json  │
+    │ - Validate          │
+    └──────────┬──────────┘
+               │
+         ┌─────┴─────┐
+         │           │
+         ▼           ▼
+    [Match]      [No Match]
+         │           │
+         │           └──▶ Return Error
+         │
+         ▼
+    ┌─────────────────────┐
+    │ Update last_login   │
+    │ in users.json       │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │ Emit login_success  │
+    │ signal with username│
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │ Main.py receives    │
+    │ signal & starts     │
+    │ Jarvis              │
+    └─────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         FILE STRUCTURE                                  │
+└─────────────────────────────────────────────────────────────────────────┘
+
+    jarvis-ai-assistant/
+    │
+    ├── Main.py ◄────────────────────── Entry point with auth
+    │
+    ├── Backend/
+    │   ├── Authentication.py ◄──────── NEW: Auth logic
+    │   ├── Model.py
+    │   ├── Automation.py
+    │   ├── SpeechToText.py
+    │   ├── TextToSpeech.py
+    │   └── ...
+    │
+    ├── Frontend/
+    │   ├── LoginPage.py ◄──────────── NEW: Login GUI
+    │   ├── GUI.py ◄─────────────────── MODIFIED: Accept app param
+    │   └── Graphics/
+    │
+    ├── Data/
+    │   ├── users.json ◄──────────────── NEW: User database (auto-created)
+    │   └── ChatLog.json
+    │
+    └── Documentation/
+        ├── AUTHENTICATION_GUIDE.md
+        ├── AUTHENTICATION_FIXED.md
+        ├── LOGIN_FEATURES.md
+        ├── QUICK_LOGIN_GUIDE.txt
+        ├── START_HERE.txt
+        └── SYSTEM_FLOW_DIAGRAM.txt ◄── This file
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    KEY TECHNICAL CHANGES                                │
+└─────────────────────────────────────────────────────────────────────────┘
+
+    BEFORE (Problem):
+    ─────────────────
+    Main.py:
+      app1 = QApplication()  ◄── First instance
+      login.show()
+      
+      def on_login():
+          GraphicalUserInterface()
+            app2 = QApplication()  ◄── Second instance (ERROR!)
+            
+    ❌ Result: "Event loop already running" error
+
+
+    AFTER (Fixed):
+    ──────────────
+    Main.py:
+      app = QApplication()  ◄── Single instance
+      login.show()
+      
+      def on_login():
+          window = MainWindow()  ◄── Reuses same app
+          window.show()
+          
+    ✅ Result: Works perfectly!
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║                    🎉 SYSTEM READY TO USE! 🎉                            ║
+║                                                                          ║
+║                      Run: python Main.py                                 ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝

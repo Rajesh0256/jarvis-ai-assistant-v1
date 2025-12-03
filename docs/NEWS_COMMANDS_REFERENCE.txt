@@ -1,0 +1,85 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║              JARVIS NEWS COMMANDS - QUICK REFERENCE                  ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ GENERAL NEWS                                                         │
+└──────────────────────────────────────────────────────────────────────┘
+  ✓ "What's the latest news?"
+  ✓ "Tell me today's news"
+  ✓ "Current news"
+  ✓ "What's happening in the news?"
+  ✓ "Give me the headlines"
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ GEOPOLITICS & WORLD AFFAIRS                                          │
+└──────────────────────────────────────────────────────────────────────┘
+  ✓ "Tell me about geopolitics"
+  ✓ "What's happening in world politics?"
+  ✓ "Geopolitical situation"
+  ✓ "International relations"
+  ✓ "World news"
+  ✓ "International news"
+  ✓ "Global affairs"
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ BUSINESS & ECONOMY                                                   │
+└──────────────────────────────────────────────────────────────────────┘
+  ✓ "Business news"
+  ✓ "Market news"
+  ✓ "Economy updates"
+  ✓ "Stock market news"
+  ✓ "Financial news"
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TECHNOLOGY & SCIENCE                                                 │
+└──────────────────────────────────────────────────────────────────────┘
+  ✓ "Technology news"
+  ✓ "Tech news"
+  ✓ "Science news"
+  ✓ "Latest tech updates"
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ SPORTS                                                               │
+└──────────────────────────────────────────────────────────────────────┘
+  ✓ "Sports news"
+  ✓ "Latest sports updates"
+  ✓ "Game results"
+  ✓ "Sports headlines"
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ HEALTH & MEDICAL                                                     │
+└──────────────────────────────────────────────────────────────────────┘
+  ✓ "Health news"
+  ✓ "Medical updates"
+  ✓ "Healthcare news"
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ SPECIFIC TOPICS                                                      │
+└──────────────────────────────────────────────────────────────────────┘
+  ✓ "News about [topic]"
+  ✓ "Tell me news about artificial intelligence"
+  ✓ "What's the news on climate change?"
+  ✓ "News about elections"
+  ✓ "Tell me about [any topic]"
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ SETUP (ONE-TIME)                                                     │
+└──────────────────────────────────────────────────────────────────────┘
+  1. Get free API key: https://newsapi.org/
+  2. Open .env file
+  3. Add: NEWS_API_KEY=your_key_here
+  4. Restart Jarvis
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TIPS                                                                 │
+└──────────────────────────────────────────────────────────────────────┘
+  • Works without API key (shows setup instructions)
+  • Get 5 latest articles per query
+  • Includes source and date information
+  • Can combine with other commands
+  • Free tier: 500 requests/day
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  Try it now: "Jarvis, what's the latest news?"                      ║
+╚══════════════════════════════════════════════════════════════════════╝

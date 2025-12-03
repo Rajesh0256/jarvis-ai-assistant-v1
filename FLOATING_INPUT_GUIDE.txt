@@ -1,0 +1,202 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║           📝 FLOATING TEXT INPUT - BACKGROUND MODE                       ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+✨ NEW FEATURE: Small floating window for text commands in background mode!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 WHAT IS IT?
+
+A small, always-on-top floating window that lets you type commands to Jarvis
+even when running in background mode!
+
+Features:
+  ✓ Always visible (stays on top)
+  ✓ Small and unobtrusive (400x80 pixels)
+  ✓ Draggable (move anywhere on screen)
+  ✓ Works alongside voice commands
+  ✓ No need to open main GUI
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 HOW TO USE:
+
+1. Start Jarvis in background mode:
+   python Jarvis_Background.py
+
+2. Look for the floating window at bottom-right of screen
+
+3. Type your command in the text field
+
+4. Press Enter or click Send
+
+5. Jarvis processes it just like voice commands!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 EXAMPLE USAGE:
+
+Scenario 1: Working on something
+  - Floating window is visible
+  - Type: "open notepad"
+  - Press Enter
+  - Notepad opens!
+
+Scenario 2: Quick search
+  - Type: "google search Python tutorials"
+  - Press Enter
+  - Browser opens with search
+
+Scenario 3: Ask question
+  - Type: "what's the weather"
+  - Press Enter
+  - Jarvis speaks the answer
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎨 WINDOW FEATURES:
+
+┌────────────────────────────────────────┐
+│ 🎤 Jarvis                    [−] [×]   │
+│ ┌────────────────────────────────────┐ │
+│ │ Type command here...         [Send]│ │
+│ └────────────────────────────────────┘ │
+└────────────────────────────────────────┘
+
+Controls:
+  • Text Field - Type your command
+  • Send Button - Submit command
+  • [−] Button - Minimize window
+  • [×] Button - Close window
+  • Drag title bar to move window
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 COMMANDS YOU CAN USE:
+
+All regular Jarvis commands work!
+
+Basic:
+  • open chrome
+  • close notepad
+  • play music
+
+Files:
+  • create folder MyDocs
+  • delete file test.txt
+  • search file report.pdf
+
+System:
+  • brightness 70
+  • volume up
+  • shutdown
+
+Knowledge:
+  • what's the latest news
+  • tell me about Python
+  • history of ancient Rome
+
+Internet:
+  • google search AI
+  • youtube search music
+  • internet speed
+
+Questions:
+  • what is machine learning
+  • how does AI work
+  • tell me a joke
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 DUAL INPUT MODE:
+
+You can use BOTH voice and text simultaneously!
+
+Voice Input:
+  • Press Ctrl+Shift+J (hotkey)
+  • Speak your command
+  • Jarvis processes it
+
+Text Input:
+  • Type in floating window
+  • Press Enter
+  • Jarvis processes it
+
+Switch between them anytime!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚙️ WINDOW CONTROLS:
+
+Move Window:
+  • Click and drag the title bar (🎤 Jarvis)
+  • Position anywhere on screen
+
+Minimize:
+  • Click [−] button
+  • Window hides (can show again from tray)
+
+Close:
+  • Click [×] button
+  • Window closes (Jarvis still runs)
+
+Reopen:
+  • Right-click system tray icon
+  • Select "Show Floating Input"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ ADVANTAGES:
+
+✓ No need to speak (quiet environments)
+✓ Faster for quick commands
+✓ Always visible and accessible
+✓ Works alongside voice commands
+✓ Small and unobtrusive
+✓ Draggable to any position
+✓ No speech recognition errors
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🐛 TROUBLESHOOTING:
+
+Problem: Window not showing
+Solution: Check if background mode started correctly
+
+Problem: Commands not working
+Solution: Check console for error messages
+
+Problem: Window disappeared
+Solution: Check if minimized, look in system tray
+
+Problem: Can't move window
+Solution: Click and drag the title bar area
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 TECHNICAL DETAILS:
+
+File: Frontend/FloatingInput.py
+Size: 400x80 pixels
+Position: Bottom-right of screen
+Always on top: Yes
+Frameless: Yes (custom title bar)
+Draggable: Yes
+
+Integration:
+  • Jarvis_Background.py - Launches floating window
+  • Text monitor thread - Processes text commands
+  • Same backend as voice commands
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 ENJOY YOUR FLOATING INPUT!
+
+Now you can control Jarvis with both voice AND text in background mode!
+
+Run: python Jarvis_Background.py
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║                    HAPPY COMMANDING! 🎤 📝                               ║
+╚══════════════════════════════════════════════════════════════════════════╝

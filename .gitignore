@@ -1,0 +1,53 @@
+# Sensitive files
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# Build files
+build/
+dist/
+*.spec
+*.exe
+*.zip
+
+# Data files
+Data/
+Data/ChatLog.json
+Data/CameraCaptures/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+Frontend/Files/*.data
+*.tmp
+*.temp
+
+# Test files
+test_*.py
+*_test.py
+
+# Distribution
+Jarvis_AI_Portable/
+*.whl

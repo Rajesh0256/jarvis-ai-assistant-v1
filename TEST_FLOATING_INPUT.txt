@@ -1,0 +1,158 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║              🧪 TEST FLOATING INPUT WINDOW                               ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+Follow these steps to test the floating input:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 TEST 1: Check if floating window appears
+
+1. Open terminal/command prompt
+
+2. Run:
+   python start_floating_input.py
+
+3. Expected result:
+   ✅ Small window appears at bottom-right
+   ✅ Window has title "🎤 Jarvis"
+   ✅ Text field says "Type command here..."
+   ✅ Send button is visible
+
+4. If you see the window:
+   ✅ TEST PASSED!
+   
+   If not:
+   ❌ Check console for errors
+   ❌ Try: pip install PyQt5
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 TEST 2: Check if window is draggable
+
+1. Click and hold on "🎤 Jarvis" title
+
+2. Drag to different position
+
+3. Expected result:
+   ✅ Window moves with mouse
+   ✅ Can position anywhere on screen
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 TEST 3: Check if text input works
+
+1. Keep floating window open
+
+2. Open NEW terminal
+
+3. Run:
+   python Main.py
+
+4. In floating window, type:
+   open notepad
+
+5. Press Enter
+
+6. Expected result:
+   ✅ Console shows: "🔵 Floating Input: Command received"
+   ✅ Console shows: "✅ TEXT MODE DETECTED!"
+   ✅ Notepad opens
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 TEST 4: Check if buttons work
+
+1. Click [−] button
+   Expected: Window minimizes/hides
+
+2. Click [×] button
+   Expected: Window closes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 TEST 5: Use the batch file
+
+1. Double-click:
+   scripts\Start_Jarvis_With_Floating_Input.bat
+
+2. Expected result:
+   ✅ Two windows open
+   ✅ Floating input window appears
+   ✅ Jarvis main window appears
+   ✅ Both work together
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🐛 IF TESTS FAIL:
+
+Problem: Window doesn't appear
+Solution:
+  pip install PyQt5
+  python start_floating_input.py
+
+Problem: Commands don't work
+Solution:
+  • Make sure Main.py is running
+  • Check Frontend/Files directory exists
+  • Check console for errors
+
+Problem: "Module not found"
+Solution:
+  pip install PyQt5
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ EXPECTED CONSOLE OUTPUT:
+
+When you type "open notepad" in floating window:
+
+Floating Input Console:
+  🔵 Floating Input: Command received: 'open notepad'
+  🔵 Floating Input: Written to TextInput.data
+  🔵 Floating Input: Status set to 'Text'
+
+Jarvis Console:
+  Current Microphone Status: Text
+  ✅ TEXT MODE DETECTED!
+  📝 TEXT MODE: Reading from TextInput.data
+  📝 TEXT MODE: Read command: 'open notepad'
+  Decision: ['open notepad']
+  [Notepad opens]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 QUICK TEST COMMANDS:
+
+Try these in floating window:
+
+1. open notepad
+   Expected: Notepad opens
+
+2. close notepad
+   Expected: Notepad closes
+
+3. what's 2+2
+   Expected: Jarvis answers "4"
+
+4. google search Python
+   Expected: Browser opens with search
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 REPORT RESULTS:
+
+After testing, note:
+  ✅ Which tests passed
+  ❌ Which tests failed
+  📋 Any error messages
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 READY TO TEST!
+
+Start with: python start_floating_input.py
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║                    GOOD LUCK! 🧪                                         ║
+╚══════════════════════════════════════════════════════════════════════════╝

@@ -1,0 +1,166 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║              📝 HOW TO USE FLOATING TEXT INPUT                           ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+✨ Small floating window for typing commands to Jarvis!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 METHOD 1: AUTOMATIC (RECOMMENDED)
+
+Use the batch file to start both together:
+
+1. Double-click: scripts\Start_Jarvis_With_Floating_Input.bat
+
+2. Two windows will open:
+   - Floating input window (small, bottom-right)
+   - Jarvis main window
+
+3. Type commands in floating window and press Enter!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 METHOD 2: MANUAL
+
+Start them separately:
+
+Terminal 1:
+  python start_floating_input.py
+
+Terminal 2:
+  python Main.py
+
+Both will run together!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 WHAT YOU'LL SEE:
+
+Small floating window at bottom-right:
+┌────────────────────────────────────────┐
+│ 🎤 Jarvis                    [−] [×]   │
+│ ┌────────────────────────────────────┐ │
+│ │ Type command here...         [Send]│ │
+│ └────────────────────────────────────┘ │
+└────────────────────────────────────────┘
+
+Features:
+  • Always on top (stays visible)
+  • Draggable (move anywhere)
+  • Small (400x80 pixels)
+  • Works with voice commands
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 HOW TO USE:
+
+1. Type command in the text field
+   Example: "open notepad"
+
+2. Press Enter or click Send button
+
+3. Jarvis processes it!
+
+4. You'll see/hear the response
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 EXAMPLE COMMANDS:
+
+Basic:
+  open chrome
+  close notepad
+  play music
+
+Files:
+  create folder TestFolder
+  delete file test.txt
+  search file document.pdf
+
+System:
+  brightness 70
+  volume up
+  shutdown
+
+Questions:
+  what's the weather
+  tell me about Python
+  what's the latest news
+
+Internet:
+  google search AI
+  youtube search music
+  internet speed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 DUAL INPUT MODE:
+
+You can use BOTH at the same time!
+
+Voice:
+  • Click microphone in main window
+  • Speak your command
+
+Text:
+  • Type in floating window
+  • Press Enter
+
+Switch between them anytime!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚙️ WINDOW CONTROLS:
+
+Move:
+  • Click and drag title bar (🎤 Jarvis)
+
+Minimize:
+  • Click [−] button
+  • Window hides
+
+Close:
+  • Click [×] button
+  • Window closes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🐛 TROUBLESHOOTING:
+
+Problem: Window not showing
+Solution: 
+  • Check if Python process is running
+  • Try running: python start_floating_input.py
+  • Check bottom-right corner of screen
+
+Problem: Commands not working
+Solution:
+  • Make sure Main.py is also running
+  • Check console for error messages
+  • Verify Frontend/Files directory exists
+
+Problem: Window disappeared
+Solution:
+  • Check if minimized
+  • Restart: python start_floating_input.py
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ QUICK START:
+
+Easiest way:
+  Double-click: scripts\Start_Jarvis_With_Floating_Input.bat
+
+Or manually:
+  Terminal 1: python start_floating_input.py
+  Terminal 2: python Main.py
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 ENJOY YOUR FLOATING INPUT!
+
+Now you can type commands to Jarvis anytime! 📝
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║                    HAPPY TYPING! ⌨️                                      ║
+╚══════════════════════════════════════════════════════════════════════════╝
